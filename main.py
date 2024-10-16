@@ -7,7 +7,7 @@ def main():
     #print("Starting asteroids!")
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT():
+            if event.type == pygame.QUIT:
                 return
         screen.fill("black")
         pygame.display.flip()
@@ -16,3 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
