@@ -8,6 +8,7 @@ class Player(CircleShape):
         self.rotation = 0
         print(f"Initial rotation: {self.rotation}") #debug print
 
+
     # in the player class
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
