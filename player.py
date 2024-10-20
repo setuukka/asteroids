@@ -6,7 +6,7 @@ class Player(CircleShape):
     def __init__(self, x, y):
         super().__init__(x,y, PLAYER_RADIUS)
         self.rotation = 0
-        print(f"Initial rotation: {self.rotation}") #debug print
+        #print(f"Initial rotation: {self.rotation}") #debug print
 
 
     # in the player class
@@ -24,18 +24,18 @@ class Player(CircleShape):
 
     def rotate(self, dt):
         self.rotation += PLAYER_TURN_SPEED * dt
-        print(f"Rotation after update: {self.rotation}") #debug print
+        #print(f"Rotation after update: {self.rotation}") #debug print
         #print(f"rotation {self.rotation}, turn speed {PLAYER_TURN_SPEED}, dt {dt}")
 
     def update(self, dt):
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_a]:
-            print("Rotating left") #Debug print
+            #print("Rotating left") #Debug print
             self.rotate(-dt)  # Rotate left
 
         if keys[pygame.K_d]:
-            print("Rotating right") #Debug print
+            #print("Rotating right") #Debug print
             self.rotate(dt)   # Rotate right
 
         if keys[pygame.K_w]:

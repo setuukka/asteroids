@@ -42,7 +42,12 @@ def main():
             other_thing.draw(screen)
         #drawable.draw(screen)
 
-
+        #Logic to see if player collides with asteroid
+        for asteroid in asteroid_group:
+            if player.detect_collision(asteroid):
+                print("Player collided with assterois")
+                print("Game over!")
+                return False
 
 
         #player.draw(screen)
