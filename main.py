@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from player import Player
 from asteroidfield import *
+from shot import *
 #from circleshape import *
 
 def main():
@@ -13,11 +14,13 @@ def main():
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroid_group = pygame.sprite.Group()
+    shot_group = pygame.sprite.Group()
 
     #CONTAINERS
     Player.containers = (updatable, drawable)
     Asteroid.containers = (updatable, drawable, asteroid_group)
     AsteroidField.containers = (updatable,)
+    Shot.containers = (updatable, drawable, shot_group)
 
     #OBJECTS
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
@@ -50,8 +53,6 @@ def main():
                 return False
 
 
-        #player.draw(screen)
-       
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000
