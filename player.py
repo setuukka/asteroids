@@ -28,7 +28,7 @@ class Player(CircleShape):
 
     def rotate(self, dt):
         self.rotation += PLAYER_TURN_SPEED * dt
-        print(f"Rotation after update: {self.rotation}") #debug print
+        #print(f"Rotation after update: {self.rotation}") #debug print
         #print(f"rotation {self.rotation}, turn speed {PLAYER_TURN_SPEED}, dt {dt}")
 
     def update(self, dt):
@@ -59,7 +59,7 @@ class Player(CircleShape):
         self.position += forward * PLAYER_SPEED * dt
     
     def shoot(self):
-        print(self.timer)
+        #print(self.timer) #DEBUG
 
         if self.timer > 0:
             return
